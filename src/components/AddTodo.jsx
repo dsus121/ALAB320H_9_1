@@ -5,8 +5,10 @@ function AddTodo({ onAdd }) {
   const [newTodo, setNewTodo] = useState("");
 
   const handleAdd = () => {
-    onAdd(newTodo);
-    setNewTodo("");
+    if (newTodo.trim()) { /*remove spaces*/
+      onAdd(newTodo);
+      setNewTodo(""); /*clear input*/
+    }
   };
 
   return (
@@ -15,11 +17,11 @@ function AddTodo({ onAdd }) {
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Enter new todo"
+        placeholder=" enter new task "
         className="todo-input"
       />
       <button onClick={handleAdd} className="add-button">
-        Add
+        +
       </button>
     </div>
   );

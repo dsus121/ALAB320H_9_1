@@ -17,16 +17,15 @@ function TodoItem({ todo, onToggleComplete, onDelete, onEdit, onSave }) {
           <span className={todo.completed ? "completed" : ""}>
             {todo.title}
           </span>
-          <button onClick={() => onEdit(todo.id)} className="edit-button">
-            Edit
-          </button>
+          <div id="button-container">
+          <button onClick={() => onEdit(todo.id)} className="edit-button">edit</button>
           <button
             onClick={() => onDelete(todo.id)}
             disabled={!todo.completed}
             className="delete-button"
           >
-            Delete
-          </button>
+            delete
+          </button></div>
         </>
       )}
     </div>

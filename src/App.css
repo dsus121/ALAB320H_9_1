@@ -1,7 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+body {
+  font-variant: small-caps;
+  color:#000000;
+  background-color: darkslategrey !important; 
+  font-family: Arial, sans-serif;
+  padding: 10px;
 }
 
+.app-container {
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #445b52;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-heading {
+  text-align: center;
+  color: #000000;
+  margin-bottom: .5em;
+}
+
+.todo-item {
+  color: black;
+  font-variant: small-caps;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+  background: none; 
+  appearance: none; /* remove default checkbox styling */
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #2e0303;
+}
+
+.todo-item .completed {
+  text-decoration: line-through;
+  color:#2e0303;
+}
+
+.todo-item .todo-text {
+  flex: 1; /* allow the text to take up available space */
+  min-width: 0; /* prevent overflow */
+  word-wrap: break-word; /* allow wrapping */
+}
+
+.todo-item .buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.edit-button {
+  background-color: #000000;
+  border-radius: 4px;
+
+}
+.save-button {
+  background-color: #000000;
+  color:#fff;
+  border-radius: 4px;
+
+}
+
+
+.delete-button {
+  background-color: #410a0f;
+  border-radius: 4px;
+
+}
+
+.delete-button:disabled {
+  background-color: #939393;
+  cursor: not-allowed;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+}
+
+.add-todo input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.add-todo button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+}
