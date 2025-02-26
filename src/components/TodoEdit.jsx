@@ -16,7 +16,7 @@ function TodoEdit({ todo, onSave }) {
         onClick={() => onSave(todo.id, editValue)}
         className="save-button"
       >
-        Save
+        save
       </button>
     </>
   );

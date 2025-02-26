@@ -111,6 +111,14 @@ button {
   margin-bottom: 20px;
 }
 
+.edit-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px dotted #a6a6a6;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
 .add-todo input {
   flex: 1;
   padding: 10px;
